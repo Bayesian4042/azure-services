@@ -134,5 +134,30 @@ let's you avoid hardcoding access to other services and abstracting away boilerp
 - Scenario 1:
     Every Hour you want to read new log files delivered by your application, and you need to transform the data to be ingested in your NO/SQL database that resides in CosmosDB
     - Trigger: timer because it;s a scheduled job that will run at a speicific time. 
-    - The bindings will be In for blob storage and Out for cosmos DB. 
-    
+    - The bindings will be In for blob storage and Out for cosmos DB.
+
+# Local Settings File
+local.settings.json for local development
+
+# Functions Core Tools
+Azure functions core tools lets you develop and test your functions on your local computer from the command prompt or terminal
+- func init: create a new Functions project in a specific language
+-     
+
+# Custom Handlers
+lighweight web servers that receive events form functions host
+
+# Durable Functions
+It is a serverless compute extension of Azure functions that allows you to write stateful functions
+
+Patterns of durable functions:
+- Function chaining: is the pattern of executing a sequence of functions in a specific order. Often the output of one function needs to be applied to the input of another function. Durable functions allows us to implement this pattern concisely in code.
+![function-chaining]()
+
+- Fan-out/fan-in: is the pattern of executing multiple functions in parallel and then waiting for them all to finish.
+
+- Asycn HTTP API: address the problem of coordinating the state of long-running operations with external clients.
+- Aggregator pattern:
+
+# Azure Functions on Kubernetes
+Azure function app can be deployed to Kubernetes cluster KEDA
